@@ -37,7 +37,9 @@
     }, 1000);
     
     timeout = setTimeout(function() {
-      new Notification('Pomodoro cycle finished');
+      new Notification('Pomodoro cycle finished', {
+        requireInteraction: true
+      });
       clearInterval(interval);
       
       
